@@ -48,8 +48,8 @@ header{
 }
 .bar{display:flex;align-items:center;gap:16px;padding:0 var(--pad);height:64px;max-width:1240px;margin:0 auto}
 .mark{
-  display:flex;align-items:center;gap:9px;background:none;border:0;padding:6px 8px 6px 0;
-  cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink);
+  display:flex;align-items:center;gap:9px;padding:6px 8px 6px 0;text-decoration:none;
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink);
 }
 .mark .glyph{
   width:26px;height:26px;border:1.5px solid var(--accent);border-radius:3px;color:var(--accent);
@@ -70,7 +70,7 @@ header nav a.on::after{content:"";position:absolute;left:12px;right:12px;bottom:
 
 /* ---------- filing header (hero) ---------- */
 main{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
-.filing{padding:clamp(48px,8vw,92px) 0 40px;border-bottom:1px solid var(--rule)}
+.filing{padding:clamp(48px,8vw,92px) 0 0;border-bottom:1px solid var(--rule)}
 .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:clamp(24px,4vw,38px)}
 .eyebrow span{white-space:nowrap}
 .eyebrow .line{flex:1;height:1px;background:var(--rule)}
@@ -90,7 +90,7 @@ main{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
 
 /* metadata strip: the filing's cover fields */
 .meta{
-  margin-top:clamp(34px,5vw,50px);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);
+  margin:clamp(34px,5vw,50px) 0 0;border-top:1px solid var(--ink);
   display:grid;grid-template-columns:repeat(4,1fr);
 }
 .meta div{padding:16px 20px 18px;border-right:1px solid var(--rule)}
@@ -178,6 +178,7 @@ section{padding:clamp(56px,8vw,96px) 0;border-bottom:1px solid var(--rule)}
 }
 .line-meta i{width:3px;height:3px;border-radius:50%;background:var(--ink-3);font-style:normal;flex:none}
 .line-meta time{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+#experience{padding-bottom:clamp(34px,4vw,52px)}
 .edu{margin-top:44px;padding-top:26px;border-top:1px solid var(--rule);display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:baseline}
 .edu > p{margin:0}
 .edu h3{font-size:16.5px;font-weight:600;margin:0;letter-spacing:-.005em}
@@ -192,7 +193,7 @@ section{padding:clamp(56px,8vw,96px) 0;border-bottom:1px solid var(--rule)}
 
 /* ---------- contact ---------- */
 .contact{padding-left:182px}
-.fields{border-top:1px solid var(--ink);max-width:720px}
+.fields{margin:0;border-top:1px solid var(--ink);max-width:720px}
 .field{display:grid;grid-template-columns:132px 1fr auto;gap:20px;align-items:center;padding:15px 0;border-bottom:1px solid var(--rule)}
 .field dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
 .field dd{margin:0;font-size:15.5px;overflow-wrap:anywhere}
@@ -238,12 +239,6 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
 .status > span{display:inline-flex;align-items:center;gap:7px}
 .status .live{display:block;width:6px;height:6px;border-radius:50%;background:#17976B;flex:none}
 .status .sep{color:var(--rule)}
-.ver-pill{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--accent-deep);
-  background:var(--accent-soft);border:1px solid transparent;border-radius:3px;padding:4px 8px;cursor:pointer;
-  transition:border-color .16s ease;
-}
-.ver-pill:hover{border-color:var(--accent)}
 
 /* ---------- dock ---------- */
 .dock{
@@ -282,22 +277,6 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
 #results li em{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-left:auto}
 .empty{padding:22px 20px;color:var(--ink-2);font-size:14.5px}
 
-/* version card */
-.vcard{max-width:400px;text-align:center;padding:36px 30px 26px;position:relative}
-.vcard .x{position:absolute;top:12px;right:12px;background:none;border:0;cursor:pointer;color:var(--ink-3);font-size:19px;line-height:1;padding:6px}
-.vcard .x:hover{color:var(--ink)}
-.vcard .glyph{width:44px;height:44px;margin:0 auto;border:1.5px solid var(--accent);border-radius:5px;color:var(--accent);display:grid;place-items:center;font-family:var(--mono);font-size:13px}
-.vcard h4{font-family:var(--display);font-weight:500;font-size:27px;letter-spacing:-.02em;margin:16px 0 6px}
-.vcard .ver{font-family:var(--mono);font-size:11.5px;color:var(--accent-deep);letter-spacing:.06em}
-.vcard dl{display:grid;grid-template-columns:1fr auto;gap:9px 20px;margin:26px 0 0;text-align:left;font-family:var(--mono);font-size:12px}
-.vcard dt{color:var(--ink-2)}
-.vcard dd{margin:0;color:var(--ink);text-align:right}
-.badge{margin-top:24px;display:inline-flex;align-items:center;gap:0;border:1px solid var(--rule);border-radius:4px;overflow:hidden;font-family:var(--mono);font-size:10px}
-.badge span{padding:5px 9px}
-.badge span:first-child{background:var(--ink);color:#fff;letter-spacing:.08em}
-.badge span:last-child{background:var(--bar);color:var(--accent-deep)}
-.vcard .fine{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:10px;color:var(--ink-3);letter-spacing:.06em}
-
 /* toast */
 .toast{
   position:fixed;left:50%;bottom:92px;transform:translate(-50%,10px);z-index:95;background:var(--ink);color:#fff;
@@ -327,7 +306,8 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
   .crest{width:38px;height:38px;border-radius:9px;font-size:11px}
   .entry::before{left:18.5px;top:48px}
   .line-meta{gap:7px;font-size:13px}
-  .edu{grid-template-columns:1fr;gap:12px}
+  .edu{grid-template-columns:1fr;gap:12px;margin-top:34px;padding-top:22px}
+  #experience{padding-bottom:30px}
   .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
   .foot-brand{grid-column:1/-1}
   .field{grid-template-columns:1fr auto;gap:3px 14px}
@@ -349,6 +329,30 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
   .tagline{max-width:none}
   .prose p{font-size:15.5px}
   .cta a{width:100%;justify-content:space-between}
+
+  /* compact mobile reading scale */
+  section{padding:46px 0}
+  .filing{padding-bottom:0}
+  .head{gap:10px}
+  .head h2{font-size:27px;letter-spacing:-.022em}
+  .head > div > p{font-size:14.5px;margin-top:7px;line-height:1.55}
+  .tagline{font-size:17.5px;line-height:1.5}
+  .meta{margin-top:26px;margin-bottom:0}
+  .meta dt{font-size:9.5px;margin-bottom:5px}
+  .meta dd{font-size:14px}
+  .meta dd small{font-size:12.5px}
+  .prose p{font-size:15px;line-height:1.62;margin-bottom:14px}
+  .chips{margin-top:20px;gap:6px}
+  .chip{padding:6px 12px;font-size:12.5px}
+  .domains{margin-top:24px;padding-top:16px}
+  .domains span{font-size:10px;padding-right:11px;margin-right:11px}
+  .entry h3,.edu h3{font-size:15.5px}
+  .entry .desc,.edu .desc{font-size:14px;line-height:1.6;margin-top:10px}
+  .card{padding:22px 18px 20px}
+  .card h3{font-size:20px}
+  .card .sub{font-size:13.5px}
+  .card p{font-size:14px;line-height:1.6}
+  .field dd{font-size:14.5px}
 }
 
 @media(max-width:560px){
@@ -375,9 +379,9 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
 
 <header>
   <div class="bar">
-    <button class="mark" id="mark" aria-label="About this site">
+    <a class="mark" href="#top" aria-label="Back to top">
       <span class="glyph" style="font-size:9px">RNW</span>
-    </button>
+    </a>
     <nav id="nav">
       <a href="#about">About</a>
       <a href="#experience">Journey</a>
@@ -524,13 +528,13 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
 
     <div class="grid rv">
       <article class="card feature">
-        <span class="idx">Case 01 · Enterprise AI</span>
-        <h3>RawrXD</h3>
-        <p class="sub">HackVidia AI Solution</p>
-        <p>An AI solution developed and pitched for HackVidia, combining problem discovery, solution design, business viability, and a final presentation to industry judges.</p>
-        <p class="award">4th Place · HackVidia AI Hackathon 2025</p>
+        <span class="idx">Case 01 · Applied AI</span>
+        <h3>Street Tweets</h3>
+        <p class="sub">Team rawrXD · Hackvidia, Arkavidia 9.0</p>
+        <p>An AI system that turns social media posts into actionable road damage reports. A citizen posts a location and a photo; NLP resolves the location, computer vision assesses the damage, and a classification model assigns priority. Reports are traceable by ID and surfaced on a public monitoring dashboard for citizens, officials, and researchers, replacing manual verification and unclear reporting paths.</p>
+        <p class="award">4th Place · Hackvidia 2025</p>
         <div class="tags">
-          <span class="tag">Enterprise AI</span><span class="tag">Solution design</span><span class="tag">Pitching</span><span class="tag">Business impact</span>
+          <span class="tag">Applied AI</span><span class="tag">NLP</span><span class="tag">Computer vision</span><span class="tag">Solution design</span><span class="tag">Pitching</span>
         </div>
       </article>
 
@@ -658,7 +662,6 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
       <span><i class="live"></i>Open to opportunities</span>
       <span class="sep">|</span>
       <span>Jakarta, ID · <time id="clock">··</time></span>
-      <button class="ver-pill" id="ver-open">v2026.8.27</button>
     </div>
   </div>
 </footer>
@@ -677,24 +680,6 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
   <div class="panel" role="dialog" aria-label="Search">
     <input id="q" placeholder="Search sections, roles, projects…" autocomplete="off">
     <ul id="results"></ul>
-  </div>
-</div>
-
-<!-- version card -->
-<div class="veil" id="ver-veil">
-  <div class="panel vcard" role="dialog" aria-label="About this site">
-    <button class="x" id="ver-x" aria-label="Close">×</button>
-    <div class="glyph">RNW</div>
-    <h4>Mya</h4>
-    <p class="ver">v2026.8.27 · paper-01</p>
-    <dl>
-      <dt>Build</dt><dd>Static HTML</dd>
-      <dt>Type</dt><dd>Google Sans</dd>
-      <dt>Scripts</dt><dd>Vanilla JS</dd>
-      <dt>Dependencies</dt><dd>None</dd>
-    </dl>
-    <div class="badge"><span>W3C</span><span>WCAG 2.2 AA</span></div>
-    <p class="fine">© 2022–2026 R. N. Wikantiyoso. All rights reserved.</p>
   </div>
 </div>
 
@@ -748,13 +733,6 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
   }
   tick(); setInterval(tick, 30000);
 
-  /* ---- version card ---- */
-  var verVeil = document.getElementById('ver-veil');
-  document.getElementById('mark').addEventListener('click', function(){ verVeil.classList.add('open'); });
-  document.getElementById('ver-open').addEventListener('click', function(){ verVeil.classList.add('open'); });
-  document.getElementById('ver-x').addEventListener('click', function(){ verVeil.classList.remove('open'); });
-  verVeil.addEventListener('click', function(e){ if(e.target === verVeil) verVeil.classList.remove('open'); });
-
   /* ---- search ---- */
   var index = [
     {t:'About', k:'about bio background business technology enterprise', s:'about', tag:'Section'},
@@ -768,7 +746,7 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
     {t:'IT Advisory Project Support · BDO Indonesia', k:'bdo advisory data validation project analysis', s:'experience', tag:'Role'},
     {t:'Digital Finance Innovation Group Analyst · OJK', k:'ojk otoritas jasa keuangan indonesia financial services authority python sql sandbox fintech regulator', s:'experience', tag:'Role'},
     {t:'Bachelor of Computer Science · Universitas Indonesia', k:'universitas indonesia computer science information systems degree graduated cohort coursework', s:'experience', tag:'Education'},
-    {t:'RawrXD · HackVidia AI Solution', k:'rawrxd hackvidia ai hackathon pitching solution design 4th place', s:'projects', tag:'Case study'},
+    {t:'Street Tweets · Team rawrXD', k:'street tweets rawrxd hackvidia arkavidia nlp computer vision road damage ai hackathon 4th place', s:'projects', tag:'Case study'},
     {t:'AWS EC2 Cloud & Network Engineering Lab', k:'aws ec2 docker linux networking wireshark tcpdump tls quic dns ubuntu', s:'projects', tag:'Case study'},
     {t:'PT Derazona Air Service', k:'derazona flight operation system information systems development', s:'projects', tag:'Case study'},
     {t:'Single Customer View', k:'single customer view etl sql data quality mapping pipelines reconciliation', s:'projects', tag:'Case study'},
@@ -812,7 +790,7 @@ footer{max-width:1240px;margin:0 auto;padding:clamp(50px,7vw,76px) var(--pad) 13
   });
   document.addEventListener('keydown', function(e){
     if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); veil.classList.contains('open') ? close() : open(); return; }
-    if(e.key === 'Escape'){ close(); verVeil.classList.remove('open'); return; }
+    if(e.key === 'Escape'){ close(); return; }
     if(!veil.classList.contains('open')) return;
     if(e.key === 'ArrowDown'){ e.preventDefault(); sel = Math.min(sel + 1, shown.length - 1); mark(); }
     if(e.key === 'ArrowUp'){ e.preventDefault(); sel = Math.max(sel - 1, 0); mark(); }
