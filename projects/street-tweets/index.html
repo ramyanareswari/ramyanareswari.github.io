@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Street Tweets · Ramya Nareswari Wikantiyoso</title>
-<meta name="description" content="An AI system that turns social media posts into actionable road damage reports.">
+<meta name="description" content="An AI system that turns social media posts about road damage into reports for the authorities responsible for fixing them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
     <div class="pmeta"><span class="yr">2025</span><span class="pill">Applied AI</span></div>
     <h1 class="ptitle">Street Tweets</h1>
     <p class="psub">Team rawrXD · Hackvidia, Arkavidia 9.0</p>
-    <p class="lede">An AI system that turns social media posts into actionable road damage reports.</p>
+    <p class="lede">An AI system that turns social media posts about road damage into reports for the authorities responsible for fixing them.</p>
     <div class="stack"><span class="tag">NLP</span><span class="tag">Computer vision</span><span class="tag">Classification</span><span class="tag">Web dashboard</span><span class="tag">Solution design</span></div>
     <p class="award" style="margin-top:22px">4th Place · Hackvidia 2025</p>
   </div>
@@ -52,28 +52,28 @@
   <div class="block rv">
     <p class="mono">Overview</p>
     <div>
-      <p>Road damage in Indonesia is reported constantly, just not through official channels. People post photos of broken roads on social media, while the formal reporting path sits behind confusing bureaucracy and slow manual verification. The information exists; it never reaches the people who can act on it.</p>
-      <p>Street Tweets treats those posts as the input. A citizen posts a location and a photo, and the system does the rest: <strong>NLP</strong> resolves where the damage is, <strong>computer vision</strong> assesses how bad it is, and a <strong>classification model</strong> assigns a priority so the worst roads surface first.</p>
-      <p>The result is a reporting loop that closes. Every report gets an ID the citizen can track through validation, routing to the responsible authority, and completion, while a public dashboard aggregates everything for officials and researchers.</p>
+      <p>People report road damage on social media rather than through official channels, where reporting means knowing which agency to contact and waiting on manual verification.</p>
+      <p>Street Tweets takes those posts as input. <strong>NLP</strong> resolves the location from the post text, <strong>computer vision</strong> assesses damage severity from the photo, and a <strong>classification model</strong> assigns a repair priority.</p>
+      <p>Each report carries an ID that can be tracked through validation, routing to the responsible authority, and completion. A public dashboard shows report volume, status distribution and reports by province.</p>
     </div>
   </div>
 
   <div class="block rv">
     <p class="mono">Features</p>
     <ul class="feat">
-      <li><b>Tweet Your Street</b> &mdash; Post a location and a photo. The model handles extraction, severity and priority, so no form filling is required.</li>
-      <li><b>Location resolution</b> &mdash; NLP reads the post text to identify where the damage actually is.</li>
-      <li><b>Damage assessment</b> &mdash; Computer vision grades severity from the photo rather than relying on self-reported descriptions.</li>
-      <li><b>Priority classification</b> &mdash; A classification model ranks reports so limited repair budgets go to the worst cases first.</li>
+      <li><b>Tweet Your Street</b> &mdash; Post a location and a photo. The system handles extraction, severity and priority.</li>
+      <li><b>Location resolution</b> &mdash; NLP reads the post text to identify where the damage is.</li>
+      <li><b>Damage assessment</b> &mdash; Computer vision grades severity from the photo.</li>
+      <li><b>Priority classification</b> &mdash; A classification model ranks reports by repair priority.</li>
       <li><b>Track Your Report</b> &mdash; A report ID moves through received, validation, sent to authority, in progress and completed.</li>
-      <li><b>Be Informed</b> &mdash; A public monitoring dashboard showing report volume, status distribution and reports by province.</li>
+      <li><b>Be Informed</b> &mdash; A public dashboard showing report volume, status distribution and reports by province.</li>
     </ul>
   </div>
 
   <div class="block rv">
     <p class="mono">Notes</p>
     <div>
-      <p>Built and pitched in a hackathon, which shaped the scope: prove the loop end to end rather than perfect any single model. Judged on problem discovery, solution design, business viability and a final pitch to industry judges.</p>
+      <p>Built and pitched for Hackvidia at Arkavidia 9.0, judged on problem discovery, solution design, business viability and a final presentation.</p>
     </div>
   </div>
 

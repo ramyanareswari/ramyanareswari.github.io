@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AWS EC2 Cloud &amp; Network Engineering Lab · Ramya Nareswari Wikantiyoso</title>
-<meta name="description" content="A hands-on cloud and networking lab: provision, deploy, then inspect what the protocols are actually doing.">
+<meta name="description" content="Cloud and networking lab: provisioning, containerised services and traffic analysis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
     <a class="crumb" href="../">&larr;&nbsp; Back to projects</a>
     <div class="pmeta"><span class="pill">Cloud</span></div>
     <h1 class="ptitle">AWS EC2 Cloud &amp; Network Engineering Lab</h1>
-    <p class="lede">A hands-on cloud and networking lab: provision, deploy, then inspect what the protocols are actually doing.</p>
+    <p class="lede">Cloud and networking lab: provisioning, containerised services and traffic analysis.</p>
     <div class="stack"><span class="tag">AWS EC2</span><span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">Wireshark</span><span class="tag">tcpdump</span></div>
   </div>
 
@@ -49,27 +49,20 @@
   <div class="block rv">
     <p class="mono">Overview</p>
     <div>
-      <p>Cloud certifications test whether you recognise a service. This lab was about whether I could stand one up and then see what it was doing at the packet level.</p>
-      <p>I configured an Ubuntu environment on <strong>AWS EC2</strong>, deployed and tested network services in <strong>Docker</strong> containers, then analysed the resulting traffic with <strong>Wireshark</strong> and <strong>tcpdump</strong> across HTTP/2, TLS/QUIC and DNS.</p>
+      <p>Configured an Ubuntu environment on <strong>AWS EC2</strong>, deployed and tested network services using <strong>Docker</strong>, and analysed HTTP/2, TLS/QUIC, DNS and network traffic using <strong>Wireshark</strong> and <strong>tcpdump</strong>.</p>
     </div>
   </div>
 
   <div class="block rv">
     <p class="mono">Features</p>
     <ul class="feat">
-      <li><b>Instance provisioning</b> &mdash; Ubuntu on EC2, configured from scratch rather than from a prebuilt image.</li>
+      <li><b>Instance provisioning</b> &mdash; Ubuntu configured on EC2.</li>
       <li><b>Containerised services</b> &mdash; Network services deployed and tested with Docker.</li>
       <li><b>Protocol analysis</b> &mdash; HTTP/2, TLS/QUIC and DNS traffic captured and inspected.</li>
-      <li><b>Packet-level tooling</b> &mdash; Wireshark and tcpdump used to verify behaviour rather than assume it.</li>
+      <li><b>Packet-level tooling</b> &mdash; Wireshark and tcpdump used to analyse the traffic.</li>
     </ul>
   </div>
 
-  <div class="block rv">
-    <p class="mono">Notes</p>
-    <div>
-      <p>This is the layer underneath most solution architecture conversations: what the network is doing, where latency and handshakes come from, and why an architecture diagram and a packet capture sometimes disagree.</p>
-    </div>
-  </div>
 
 </main>
 

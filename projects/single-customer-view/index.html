@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Single Customer View · Ramya Nareswari Wikantiyoso</title>
-<meta name="description" content="An assessment of how customer data moves between systems, and where it quietly breaks.">
+<meta name="description" content="Assessment of automated Single Customer View generation across multiple source systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
     <div class="pmeta"><span class="yr">2024</span><span class="pill">Enterprise Data</span></div>
     <h1 class="ptitle">Single Customer View</h1>
     <p class="psub">Data Quality & ETL Assessment</p>
-    <p class="lede">An assessment of how customer data moves between systems, and where it quietly breaks.</p>
+    <p class="lede">Assessment of automated Single Customer View generation across multiple source systems.</p>
     <div class="stack"><span class="tag">ETL</span><span class="tag">SQL</span><span class="tag">Data quality</span><span class="tag">Data mapping</span><span class="tag">Pipelines</span><span class="tag">Reconciliation</span></div>
   </div>
 
@@ -50,30 +50,23 @@
   <div class="block rv">
     <p class="mono">Overview</p>
     <div>
-      <p>A Single Customer View is only as trustworthy as the pipeline underneath it. If extraction misses records, transformation logic drifts, or exceptions are silently dropped, every downstream report inherits the error without anyone noticing.</p>
-      <p>I assessed automated Single Customer View generation across multiple source systems, covering extraction, transformation logic, data mapping, pipeline controls, reconciliation, exception handling and downstream reporting.</p>
-      <p>The work was less about running queries and more about understanding <strong>how data moves between systems</strong>, where controls should sit, and what evidence proves the output is complete.</p>
+      <p>Assessed automated <strong>Single Customer View</strong> generation across multiple source systems, covering extraction, transformation logic, data mapping, pipeline controls, reconciliation, exception handling and downstream reporting.</p>
+      <p>Validation ran with <strong>SQL</strong> across several source databases.</p>
     </div>
   </div>
 
   <div class="block rv">
     <p class="mono">Features</p>
     <ul class="feat">
-      <li><b>Source-to-target mapping</b> &mdash; Tracing each field from origin system to the consolidated view.</li>
-      <li><b>Transformation review</b> &mdash; Checking the logic that merges and de-duplicates customer records.</li>
-      <li><b>Pipeline controls</b> &mdash; Identifying where controls exist, and where they are assumed rather than implemented.</li>
-      <li><b>Reconciliation</b> &mdash; Verifying record counts and values hold across the hops.</li>
-      <li><b>Exception handling</b> &mdash; Reviewing what happens to records that fail, and whether anyone sees them.</li>
-      <li><b>Multi-database validation</b> &mdash; Validating across several source databases rather than a single extract.</li>
+      <li><b>Source-to-target mapping</b> &mdash; Tracing each field from its origin system to the consolidated view.</li>
+      <li><b>Transformation review</b> &mdash; Reviewing the logic that merges and de-duplicates customer records.</li>
+      <li><b>Pipeline controls</b> &mdash; Reviewing the controls applied across the pipeline.</li>
+      <li><b>Reconciliation</b> &mdash; Verifying record counts and values across each hop.</li>
+      <li><b>Exception handling</b> &mdash; Reviewing how records that fail are handled.</li>
+      <li><b>Multi-database validation</b> &mdash; Validating across several source databases.</li>
     </ul>
   </div>
 
-  <div class="block rv">
-    <p class="mono">Notes</p>
-    <div>
-      <p>The transferable part is the habit: before trusting a dashboard, understand the pipeline that fills it.</p>
-    </div>
-  </div>
 
 </main>
 
