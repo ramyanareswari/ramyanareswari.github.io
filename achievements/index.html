@@ -1,19 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.className="js";</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Achievements · Ramya Nareswari Wikantiyoso</title>
-<link rel="canonical" href="https://ramyanareswari.github.io/projects/#achievements">
-<meta http-equiv="refresh" content="0; url=../projects/#achievements">
-<script>location.replace('../projects/#achievements');</script>
-<style>
-  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fff;color:#576059;
-       font-family:"Google Sans",Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px}
-  a{color:#1A73E8}
-</style>
+<meta name="description" content="Competitions, recognition and the work behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <p>Achievements have moved. <a href="../projects/#achievements">Continue to Projects</a>.</p>
+
+<header>
+  <div class="bar">
+    <a class="mark" href="../" aria-label="Home">
+      <span class="glyph" style="font-size:9px">RNW</span>
+    </a>
+    <nav id="nav">
+      <a href="../#about">About</a>
+      <a href="../#experience">Journey</a>
+      <a href="../projects/">Projects</a>
+      <a href="../achievements/">Awards</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+    <div class="tools"><span class="lang">EN</span></div>
+  </div>
+</header>
+
+<main>
+  <div class="page">
+    <a class="crumb" href="../">&larr;&nbsp; Back to home</a>
+    <h1 class="ptitle">Achievements</h1>
+    <p class="lede">Competitions, recognition and the work behind them.</p>
+  </div>
+
+  <div class="list rv">
+    <a class="item" href="hackvidia-2025/">
+      <span class="when">2025 &middot; Competition</span>
+      <h3>4th Place, Hackvidia 2025</h3>
+      <p class="org">Arkavidia 9.0, ITB &middot; National</p>
+      <p>Built Street Tweets, an AI system that turns social media posts about road damage into traceable, prioritised reports.</p>
+      <div class="stack"><span class="tag">Applied AI</span><span class="tag">Solution design</span><span class="tag">Pitching</span><span class="tag">Business viability</span></div>
+      <span class="go" aria-hidden="true">&#8599;</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div class="brand-row">
+        <span class="glyph-sm">RNW</span>
+        <b>Mya</b>
+      </div>
+      <p>Business Analyst at NTT DATA. Translating business problems into enterprise technology solutions, and building toward Enterprise AI, Solutions Architecture and Presales.</p>
+    </div>
+
+    <nav class="foot-col">
+      <p class="mono">Explore</p>
+      <a href="../#about">About</a>
+      <a href="../#experience">Journey</a>
+      <a href="../projects/">Projects</a>
+      <a href="../achievements/">Achievements</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+
+    <nav class="foot-col">
+      <p class="mono">Connect</p>
+      <a href="mailto:ramyanares@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/ramyanareswari" target="_blank" rel="noopener">LinkedIn<em>&#8599;</em></a>
+      <a href="https://github.com/ramyanareswari" target="_blank" rel="noopener">GitHub<em>&#8599;</em></a>
+      <a href="https://drive.google.com/drive/folders/1AAjxa8m1hV4EsavjOMnpBCNO15Yz_xqs?usp=sharing" target="_blank" rel="noopener">R&eacute;sum&eacute; (On Request)<em>&#8599;</em></a>
+    </nav>
+  </div>
+
+  <div class="foot-base">
+    <span class="mono">&copy; 2022&ndash;2026 Ramya Nareswari Wikantiyoso. All rights reserved.</span>
+    <div class="status mono">
+      <span><i class="live"></i>Open to opportunities</span>
+      <span class="sep">|</span>
+      <span>Jakarta, ID &middot; <time id="clock">&middot;&middot;</time></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var clock = document.getElementById('clock');
+  function tick(){
+    try{
+      clock.textContent = new Intl.DateTimeFormat('en-GB', {
+        hour:'2-digit', minute:'2-digit', hour12:false, timeZone:'Asia/Jakarta'
+      }).format(new Date()) + ' WIB';
+    }catch(err){ clock.textContent = 'GMT+7'; }
+  }
+  tick(); setInterval(tick, 30000);
+
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.1});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
 </body>
 </html>
